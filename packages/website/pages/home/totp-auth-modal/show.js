@@ -1,7 +1,7 @@
 import component from './component.js'
 import { render, createVNode } from 'vue'
 
-export function show (instance, props) {
+export function show (instance, { onOk }) {
   const el = document.createElement('span')
   document.body.appendChild(el)
 
@@ -11,7 +11,7 @@ export function show (instance, props) {
   }
 
   const vnode = createVNode(component, {
-    ...props,
+    onOk,
     onHidden () {
       unmount()
     }

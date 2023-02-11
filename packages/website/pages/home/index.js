@@ -18,35 +18,34 @@ export default defineComponent({
     const authUris = ref([])
     const route = useRoute()
     const instance = getCurrentInstance()
-    const { ctx } = instance
+
+    function appendAuthUri (authUri) {
+      authUris.value.push(authUri)
+    }
     return {
       route,
       authUris,
-      totpAuthModalOnOk (e, form) {
-        const authUri = TOTPAuth.stringify(form)
-        try {
-          TOTPAuth.parse(authUri)
-        } catch (err) {
-          e.preventDefault()
-          console.error(err)
-          window.alert(err.message)
-          return
-        }
-
-        ctx.appendAuthUri(authUri)
-      },
       showTotpAuthForm () {
         TotpAuthModalShow(instance, {
-          onOk: ctx.totpAuthModalOnOk
+          onOk (e, form) {
+            const authUri = TOTPAuth.stringify(form)
+            try {
+              TOTPAuth.parse(authUri)
+            } catch (err) {
+              e.preventDefault()
+              console.error(err)
+              window.alert(err.message)
+              return
+            }
+
+            appendAuthUri(authUri)
+          }
         })
       },
       showExportModal () {
         ExportModalShow(instance, {
           authUris: authUris.value
         })
-      },
-      appendAuthUri (authUri) {
-        authUris.value.push(authUri)
       },
       setAuthUris (value) {
         authUris.value = value

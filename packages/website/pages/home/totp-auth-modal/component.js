@@ -3,7 +3,7 @@ import { defineComponent, reactive, getCurrentInstance } from 'vue'
 
 export default defineComponent({
   ...render,
-  compatConfig: { MODE: 3 },
+  // compatConfig: { MODE: 3 },
   components: {},
   emits: {
     ok (e, value) {
