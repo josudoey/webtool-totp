@@ -1,0 +1,3 @@
+b-modal(ref="modal" size="md" @ok="onModalOk" @shown="onModalShown" @hidden="onModalHidden" centered)
+  template(v-slot:modal-title).py-2 Export
+  ExportForm(@ok="generate($event)")

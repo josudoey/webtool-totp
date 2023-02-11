@@ -1,0 +1,8 @@
+form.form.form(@submit.prevent='handle')
+  input(hidden type="text" autocomplete="username")
+  label(v-if="route.query.tips") tips: {{route.query.tips}}
+  b-input-group
+    b-form-input(type="password" autocomplete="current-password" v-model="form.password" placeholder="password")
+    template(#append)
+      button.btn.btn-secondary(type="submit")
+        b-icon(icon="unlock-fill")

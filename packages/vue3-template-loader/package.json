@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "~vue3-template-loader",
+  "version": "0.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "lodash": "^4.17.21",
+    "vue": "^3.2.45",
+    "vue-loader": "^17.0.1",
+    "webpack": "^5.75.0"
+  }
+}

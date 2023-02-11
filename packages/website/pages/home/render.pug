@@ -1,0 +1,19 @@
+b-navbar(type="dark" variant="dark")
+  b-navbar-brand TOTP
+  b-navbar-nav.ml-auto(v-if="authUris.length>0")
+    b-nav-item
+      b-icon(icon="save" @click="showExportModal")
+b-container.mt-3.px-2
+  b-row.justify-content-md-center
+    template(v-if="route.query.s&&authUris.length===0")
+      b-col 
+        UnlockForm(@ok="setAuthUris($event)")
+    template(v-else)
+      b-col 
+        b-card.m-1(no-body)
+          b-card-header
+            b-card-title OTP
+              b-button.mx-1.px-1.py-0(@click="showTotpAuthForm")
+                b-icon(icon="plus")
+          b-card-body
+            TOTPList(:auth-uris="authUris")

@@ -1,0 +1,4 @@
+{
+  // see https://typescript-eslint.io/docs/linting/typed-linting/monorepos
+  "extends": "./tsconfig.json"
+}

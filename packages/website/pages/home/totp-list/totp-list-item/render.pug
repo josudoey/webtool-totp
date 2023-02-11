@@ -1,0 +1,5 @@
+b-list-group-item
+  TOTPAuthOutlet(:authUri="authUri" v-slot="{issuer,secret,totp,accountName}")
+    div {{issuer}}
+    div ({{accountName}})
+    div {{totp}}

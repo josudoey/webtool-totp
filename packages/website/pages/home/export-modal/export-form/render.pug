@@ -1,0 +1,9 @@
+b-form(@submit.prevent="validate()&&submit()")
+  input(hidden type="text" autocomplete="username")
+  button.d-none(type="submit")
+  .input-group
+    input.form-control(type="password" autocomplete="new-password" v-model="form.newPassword" placeholder="export password" required)
+  .input-group
+    input.form-control(type="password" autocomplete="new-password" v-model="form.confirmPassword" placeholder="confirm password" required)
+  .input-group
+    input.form-control(type="text" v-model="form.passwordTips" placeholder="password tips" required)

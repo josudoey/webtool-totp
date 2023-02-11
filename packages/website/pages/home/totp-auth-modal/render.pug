@@ -1,0 +1,11 @@
+b-modal(ref="modal" size="md" @ok="onModalOk" @shown="onModalShown" @hidden="onModalHidden" centered)
+  template(v-slot:modal-title).py-2 New
+  template(#default="{ ok }")
+    form.form(@submit.prevent="ok")
+      button.d-none(ref="submit" type="submit")
+      .input-group
+        input.form-control(type="text" v-model="form.issuer" placeholder="issuer")
+      .input-group
+        input.form-control(type="text" v-model="form.accountName" placeholder="account name" required)
+      .input-group
+        input.form-control(type="new-password" v-model="form.secret" placeholder="secret" required)

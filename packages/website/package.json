@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "~website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josudoey/webtool-template.git"
+  },
+  "author": "Joey Fang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josudoey/webtool-template/issues"
+  },
+  "homepage": "https://github.com/josudoey/webtool-template#readme",
+  "devDependencies": {
+    "@vue/compat": "^3.2.45",
+    "base64-js": "^1.5.1",
+    "bootstrap": "^4.6.1",
+    "bootstrap-vue": "^2.23.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "i": "^0.3.7",
+    "notp": "^2.0.3",
+    "npm": "^9.4.2",
+    "pako": "^2.1.0",
+    "popper.js": "^1.16.1",
+    "portal-vue": "^v2.1.7",
+    "qrcode": "^1.5.1",
+    "sjcl": "^1.0.8",
+    "stream-browserify": "^3.0.0",
+    "thirty-two": "^1.0.2",
+    "tiny-emitter": "^2.1.0",
+    "totp": "^0.0.1",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6",
+    "vuex": "^4.1.0",
+    "~vue3-template-loader": "workspace:*",
+    "~webpack5": "workspace:*"
+  }
+}
